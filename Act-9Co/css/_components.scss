@@ -1,0 +1,31 @@
+//SCROLL SECTION
+.scroll{
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: $colorNaranja;
+    padding: 1rem;
+
+    &__text-container{
+        display: inline-block;
+        animation: scroll-text 30s linear infinite;
+    }
+    &__text-container-content{
+        display: inline-block;
+        color: $colorBlanco;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        font-family: $fontOjuju;
+        font-weight: bold;
+        letter-spacing: 0.4rem;
+        width: 170rem;
+        
+    }
+    @keyframes scroll-text {
+        0% {
+        transform: translateX(100%);
+        }
+        100% {
+        transform: translateX(-100%);
+        }
+    }
+    
+}

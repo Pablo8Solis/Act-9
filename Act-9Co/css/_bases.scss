@@ -1,0 +1,58 @@
+$colorFondoNegro:#191B1D;
+$colorFondoNegro2:#0F1112;
+$colorNaranja:#FF6123;
+$colorNaranja2:#bd562d;
+$colorNegro:#0D0D0D;
+$colorAzul:#0f41d9;
+$colorBlanco:#ffffff;
+$colorGris:#474b4e;
+$colorBlanco2:#eaeaea;
+$fontOjuju: "Ojuju", system-ui;
+$fontAnton:"Anton", sans-serif;
+$fontRoboto:"Roboto", sans-serif;
+$transition-collapse:         height .35s ease;
+$transition-collapse-width:   width .35s ease;
+
+//MIXINS
+@mixin flex-box($justify, $align){
+    display: flex;
+    justify-content:$justify ;
+    align-items: $align;
+}
+@mixin buttonStyles($type){
+    @if $type == "primary"{ 
+        background-color: $colorNaranja;  
+    } @else if $type == "secondary"{ 
+        background-color: $colorGris;  
+    } @else if $type == "tertiaty"{  
+        background-color: $colorBlanco;  
+    }
+}
+@mixin tablet{
+    @media screen and (max-width:51.25rem) {@content};
+}
+@mixin celular{
+    @media screen and (max-width:43.75rem) {@content};
+}
+//EXTENCED
+%ButtonsStylesLinks{
+    color: $colorBlanco2;
+        text-decoration: none;
+        padding: .5rem;
+        border: 1px solid $colorBlanco2;
+        border-radius: 5rem;
+        margin-top: 1rem;
+        transition: .5s;
+        font-family: $fontOjuju;
+        font-size: clamp(.5rem,4vw,1rem);
+        &:hover{
+            color: $colorNaranja;
+            border-color: $colorNaranja;
+            transition: .5s;
+            transform: scale(1.03);
+        }
+        @include celular{
+            font-size: .5rem;
+        }
+}
+

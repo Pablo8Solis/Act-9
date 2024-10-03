@@ -1,0 +1,440 @@
+.banner__link {
+  color: #eaeaea;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 5rem;
+  margin-top: 1rem;
+  transition: 0.5s;
+  font-family: "Ojuju", system-ui;
+  font-size: clamp(0.5rem, 4vw, 1rem);
+}
+.banner__link:hover {
+  color: #FF6123;
+  border-color: #FF6123;
+  transition: 0.5s;
+  transform: scale(1.03);
+}
+@media screen and (max-width: 43.75rem) {
+  .banner__link {
+    font-size: 0.5rem;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-snap-type: y mandatory;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px; /* 1rem = 10px*/
+  background-color: #0F1112;
+}
+
+main {
+  background-color: #0F1112;
+}
+
+.header {
+  background-color: #0F1112;
+  padding: 1rem 4rem 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 43.75rem) {
+  .header {
+    gap: 2rem;
+    padding: 1rem;
+  }
+}
+.header__logo-link {
+  color: #FF6123;
+  text-decoration: none;
+  font-family: "Ojuju", system-ui;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: bold;
+  transition: 0.5s;
+}
+.header__logo-link:hover {
+  transition: 0.5s;
+  text-decoration: underline;
+}
+.header__container-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header__box-icon {
+  width: 1.7rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.header__box-icon:hover {
+  transform: scale(1.07);
+  transition: 0.5s;
+}
+.header__box-icon-img {
+  width: 100%;
+}
+
+.banner {
+  background-image: url(../img/banner-3.png);
+  background-color: #4e4e4e;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.banner__title {
+  color: #FF6123;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(3rem, 10vw, 100rem);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.banner__title:hover {
+  transition: 0.5s;
+  transform: scale(1.07);
+}
+.banner__title:hover .banner__title-span-disabled {
+  opacity: 1;
+  transition: 0.5s;
+}
+.banner__title-span {
+  font-style: italic;
+}
+.banner__title-span-disabled {
+  opacity: 0;
+  font-style: italic;
+}
+.banner__title-span-disabled:hover {
+  opacity: 1;
+}
+.main {
+  padding: 1rem;
+  background-color: #0F1112;
+}
+.main__inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.main__inicio-title {
+  color: #FF6123;
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 9vw, 70rem);
+}
+@media screen and (max-width: 51.25rem) {
+  .main__inicio-title {
+    font-size: 4.2rem;
+  }
+}
+@media screen and (max-width: 43.75rem) {
+  .main__inicio-title {
+    font-size: 1.8rem;
+  }
+}
+.main__inicio-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 51.25rem) {
+  .main__inicio-article {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.main__inicio-article-containerDisa {
+  flex: 4;
+}
+.main__inicio-article-container-text {
+  color: #FF6123;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+  text-align: start;
+}
+@media screen and (max-width: 43.75rem) {
+  .main__inicio-article-container-text {
+    font-size: 0.8rem;
+  }
+}
+.main__inicio-article-container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 3.5;
+}
+.main__video {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+@media screen and (max-width: 43.75rem) {
+  .main__video {
+    width: 300px;
+  }
+}
+.main__video-container-wh {
+  width: 95%;
+  filter: brightness(50%);
+  border-radius: 40%;
+}
+.main__productos {
+  padding: 2rem;
+}
+.main__productos-title {
+  padding: 2rem;
+  font-size: clamp(1.9rem, 5vw, 25rem);
+}
+.main__productos-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  justify-items: center;
+  gap: 3rem;
+}
+.main .card {
+  background-color: #191B1D;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main .card:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.main .card-title {
+  color: #eaeaea;
+}
+.main .card-text {
+  color: #eaeaea;
+  opacity: 0.7;
+}
+.main .btn {
+  background-color: #FF6123;
+  border: none;
+}
+.main .btn:hover {
+  background-color: #bd562d;
+}
+.main__discografia {
+  padding: 2rem;
+}
+.main__discografia-df {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main__discografia-album {
+  width: 40rem;
+  height: 25rem;
+}
+@media screen and (max-width: 43.75rem) {
+  .main__discografia-album {
+    width: 20rem;
+    height: 26rem;
+  }
+}
+.main__discografia-album-box {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__discografia-album-box-btn {
+  background-color: #bd562d;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 10rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.main__discografia-album-box-btn:hover {
+  background-color: #FF6123;
+}
+.main .carousel {
+  width: 35rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 51.25rem) {
+  .main .carousel {
+    display: none;
+  }
+}
+.main .carousel-item img {
+  border-radius: 1rem;
+}
+.main__biografia {
+  padding: 2rem;
+}
+.main__biografia-content {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem 2rem 1rem 8rem;
+}
+@media screen and (max-width: 51.25rem) {
+  .main__biografia-content {
+    padding: 1rem 2rem 1rem 5rem;
+  }
+}
+@media screen and (max-width: 43.75rem) {
+  .main__biografia-content {
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.main__biografia-container {
+  width: 30rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main__biografia-container:hover {
+  transition: 0.5s;
+  transform: scale(1.03);
+}
+@media screen and (max-width: 43.75rem) {
+  .main__biografia-container {
+    width: 20rem;
+  }
+}
+.main__biografia-container-img {
+  border-radius: 1rem;
+}
+@media screen and (max-width: 43.75rem) {
+  .main__biografia-container-img {
+    width: 25rem;
+  }
+}
+.main .collapse:not(.show) {
+  display: none;
+}
+.main .collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+.main .collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+.main .card p {
+  color: #eaeaea;
+  font-size: clamp(1rem, 5vw, 1.1rem);
+}
+@media screen and (max-width: 43.75rem) {
+  .main .card {
+    width: 8rem;
+  }
+}
+
+.footer {
+  background-color: #0D0D0D;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.footer__title {
+  color: #ffffff;
+  font-family: "Ojuju", system-ui;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+}
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer__nav-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__nav-title {
+  color: #eaeaea;
+  margin-bottom: 5px;
+  font-family: "Anton", sans-serif;
+  font-weight: 200;
+  font-size: clamp(1.1rem, 5vw, 1.5rem);
+}
+.footer__link {
+  color: #eaeaea;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer__link:hover {
+  transition: 0.5s;
+  transform: scale(1.09);
+}
+.footer__link-img {
+  width: 2rem;
+}
+.footer__img {
+  width: 4rem;
+}
+
+.scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #FF6123;
+  padding: 1rem;
+}
+.scroll__text-container {
+  display: inline-block;
+  animation: scroll-text 30s linear infinite;
+}
+.scroll__text-container-content {
+  display: inline-block;
+  color: #ffffff;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-family: "Ojuju", system-ui;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  width: 170rem;
+}
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=main.css.map */
